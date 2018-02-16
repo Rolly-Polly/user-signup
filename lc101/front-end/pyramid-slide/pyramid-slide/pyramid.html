@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html {
+            border-style: double;
+            border-color: yellow;
+            background-color: lightblue;
+        }
+
+        div {
+    
+            padding-top: 0;
+            padding-right: 30px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            font-weight: bold;
+    
+        }
+
+        #pyramid {
+            line-height: 0;
+            font-size: 30px;
+        }
+
+        body {
+            font-family: "Courier New", monospace;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Pyramid Slide</h1>
+    <br>
+    <p> Brick Symbol </p>
+    <select  name = "Brick Style" id = "brickStyle" type = "select" onchange= "drawPyramid()">
+        <option value = "*">*</option>
+        <option value = "#">#</option>
+        <option value = "@">@</option>
+        <option value = "$">$</option>
+    </select>
+</br>
+    </p>
+   
+
+    <p>How high?</p>
+    
+        <input type="range" id="howHigh" value = "10" min=1" max="20" oninput="drawPyramid(this.value)" onchange = "pyramidHeight.value = howHigh.value" >
+        <output id = "pyramidHeight">10</output>
+
+    <div id="pyramid"></div>
+
+    <script src="pyramid.js"></script>
+
+   
+</body>
+</html>
